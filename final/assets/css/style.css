@@ -1,0 +1,425 @@
+body{
+    overflow-x: hidden;
+}
+
+#image-banner {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)), url('../img/background.jpeg');
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 950px;
+    opacity: 0.7;
+    position: relative;
+    z-index: 0;
+
+    font-family: 'Iowan Old Style', sans-serif;
+    font-size: 50pt;
+    color: white; 
+    line-height: 0.8;
+    text-align:left;
+    align-items: flex-end;
+}
+
+
+header {
+    width: 100%;
+    background: white;
+    position: fixed; 
+    z-index: 1000; 
+}
+
+#title{
+    display:flex;
+    flex-direction:row;
+    gap: 0px;
+
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translateX(-20%);
+    z-index: 1; 
+    text-align: center; 
+    width: 100%;
+}
+
+#explain{
+    font-family: ;
+    display:flex;
+    flex-direction:column;
+    gap: 0px;
+    text-align:left;
+    margin-left: -250px;
+    font-family: "Kotta One", serif;
+    font-size: 36px;
+}
+
+#berkeley{
+    opacity: 100%;
+    top:-150px;
+    left: 400px;
+    border: solid;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+/*All*/
+#left_box {
+    display: flex;
+    position: absolute;
+    align-items:center;
+    flex-direction: column;
+    top: -30px;
+    left: 0;
+}
+
+/*Big blob*/
+#left_box img {
+    opacity: 70%;
+    top:-200px;
+    left: -100px;
+    position: absolute;
+    z-index: 1; /* Ensure all images start at the same z-index */
+}
+
+/*Small blob*/
+#left_box img:nth-child(2) {
+    opacity: 90%;
+    top: 200px;
+    left: 250px; /* Adjust the position of the second image */
+    z-index: 2; /* Move the second image above the first */
+}
+
+/*Pfp*/
+#left_box img:nth-child(3) {
+    opacity: 100%;
+    top: -120px ;
+    left: -40px; /* Adjust the position of the third image */
+    z-index: 3; /* Move the third image above the second */
+}
+
+#left_box img:nth-child(4) {
+    opacity: 100%;
+    top: 420px ;
+    left: 325px; /* Adjust the position of the third image */
+    z-index: 3; /* Move the third image above the second */
+}
+
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translateY(0); /* Starting position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Back to starting position */
+  }
+}
+
+#left_box img[src="assets/img/arrow.png"] {
+  animation: arrowAnimation 2s infinite; /* Apply the animation */
+}
+
+#right_box{
+    display:flex;
+    flex-direction:column;
+    gap: 0px;
+    text-align:left;
+    margin-left: 400px;
+}
+
+#name{
+font-family: "Kotta One", serif;
+font-size: 48px;
+}
+
+#role{
+font-family: "Kotta One", serif;
+font-size: 26px;
+margin-top: 10px;
+
+}
+
+#navbar {
+    background: #FDF0EC;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+    z-index: 999;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.navbar-item {
+    padding: 5px 20px;
+    cursor: pointer;
+    font-family: 'Khula', sans-serif;
+
+    
+}
+
+.navbar-item:hover {
+    font-weight: bold;
+}
+
+#left_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+#right_nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/*CONTENT*/
+
+.content_item{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+    gap:70px;
+}
+
+.content{
+    display:flex;
+    justify-content:space-around;
+    align-items:left;
+    flex-direction: column;
+    padding: 100px;
+    gap:30px;
+}
+
+.align_row{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-direction: row;
+}
+
+.image {
+    width: 550px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.proj_name{
+    font-family: "Kotta One", serif;
+    font-size: 36px;
+}
+
+.desc{
+    font-family: "Khula", serif;
+    font-size: 24px;
+}
+
+.tags{
+    font-family: "Khula", serif;
+    font-size: 24px;
+}
+
+.words{
+    font-family: "Khula", serif;
+    font-size: 16px;
+
+}
+
+/*FOOTER*/
+
+.big_footer{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction: column;
+}
+
+.footer{
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding: 50px;
+}
+
+.left{
+  display:flex;
+  flex-direction:column;
+  gap: 20px;
+  text-align:center;
+  margin-left: 200px;
+}
+
+.middle{
+    font-family: 'Iowan Old Style', sans-serif;
+    font-size: 30px;
+    color: #3B2929;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    line-height: 1;
+}
+
+
+.right{
+  display:flex;
+  flex-direction:column;
+  gap: 20px;
+  text-align:center;
+  margin-right: 200px;
+}
+
+
+
+.copy {
+    font-family: "Kotta One", serif;
+    text-align:center;
+}
+
+.butt{
+    margin-bottom: 20px;
+}
+
+
+/*
+.logo{
+  width:10vw;
+  max-width:50px;
+  aspect-ratio: 1/1;
+}
+
+
+.header_txt {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
+*/
+
+/*------------------- ABOUT PAGE ---------------------------*/
+
+.images {
+    width: 550px;
+    border-radius: 0px;
+    border: 1px solid; /* Border with 5px width */
+    padding: 15px; /* Add 5px padding */
+}
+
+#center {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: 'Kotta One', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+   
+}
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  /*max-width: 1000px;
+  position: relative;
+  margin: auto;*/
+    width: 550px;
+    border-radius: 0px;
+    border: 1px solid; /* Border with 5px width */
+    padding: 15px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
